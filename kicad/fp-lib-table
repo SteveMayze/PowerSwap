@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name PowerSwap-Footprints)(type KiCad)(uri "$(KIPRJMOD)/lib/PowerSwap-Footprints.pretty")(options "")(descr ""))
+)
