@@ -7,3 +7,4 @@
 *.swp
 *.zip
 **/*-cache.lib
+_autosave-*
