@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source /home/steve/pcbs/PowerSwap/kicad/PowerSwap.sch)
-    (date "Wed 26 Aug 2015 16:13:46 CEST")
-    (tool "Eeschema no-vcs-found-product")
+    (source /home/vagrant/pcbs/PowerSwap/kicad/PowerSwap.sch)
+    (date "Thu 22 Oct 2015 10:21:24 PM CEST")
+    (tool "Eeschema 0.201508140901+6091~28~ubuntu14.04.1-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title)
@@ -24,7 +24,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 55BD1FFB))
     (comp (ref R1)
-      (value 2.1MΩ)
+      (value 1.2MΩ)
       (footprint Resistors_SMD:R_0805)
       (libsource (lib device) (part R))
       (sheetpath (names /) (tstamps /))
@@ -70,7 +70,7 @@
       (tstamp 55BD266F))
     (comp (ref C1)
       (value 4.7μF)
-      (footprint Capacitors_SMD:C_0805)
+      (footprint Capacitors_SMD:C_1206)
       (libsource (lib device) (part C))
       (sheetpath (names /) (tstamps /))
       (tstamp 55BD2754))
@@ -137,6 +137,56 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 55DDCC6F)))
   (libparts
+    (libpart (lib device) (part C)
+      (description "Unpolarized capacitor")
+      (footprints
+        (fp C?)
+        (fp C_????_*)
+        (fp C_????)
+        (fp SMD*_c)
+        (fp Capacitor*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part INDUCTOR)
+      (fields
+        (field (name Reference) L)
+        (field (name Value) INDUCTOR))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistor)
+      (footprints
+        (fp R_*)
+        (fp Resistor_*))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part TST)
+      (fields
+        (field (name Reference) P)
+        (field (name Value) TST))
+      (pins
+        (pin (num 1) (name ~) (type passive))))
+    (libpart (lib conn) (part CONN_01X02)
+      (footprints
+        (fp Pin_Header_Straight_1X02)
+        (fp Pin_Header_Angled_1X02)
+        (fp Socket_Strip_Straight_1X02)
+        (fp Socket_Strip_Angled_1X02))
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_01X02))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive))))
     (libpart (lib PowerSwap-Symbols) (part TPS63030)
       (fields
         (field (name Reference) U)
@@ -152,64 +202,14 @@
         (pin (num 8) (name VINA) (type input))
         (pin (num 9) (name GND) (type input))
         (pin (num 10) (name FB) (type input))
-        (pin (num 11) (name EP) (type input))))
-    (libpart (lib device) (part TST)
-      (fields
-        (field (name Reference) P)
-        (field (name Value) TST))
-      (pins
-        (pin (num 1) (name ~) (type passive))))
-    (libpart (lib device) (part INDUCTOR)
-      (fields
-        (field (name Reference) L)
-        (field (name Value) INDUCTOR))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))))
-    (libpart (lib device) (part C)
-      (description "Unpolarized capacitor")
-      (footprints
-        (fp C?)
-        (fp C_????_*)
-        (fp C_????)
-        (fp SMD*_c)
-        (fp Capacitor*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part R)
-      (description Resistor)
-      (footprints
-        (fp R_*)
-        (fp Resistor_*))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib conn) (part CONN_01X02)
-      (footprints
-        (fp Pin_Header_Straight_1X02)
-        (fp Pin_Header_Angled_1X02)
-        (fp Socket_Strip_Straight_1X02)
-        (fp Socket_Strip_Angled_1X02))
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_01X02))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name P2) (type passive)))))
+        (pin (num 11) (name EP) (type input)))))
   (libraries
-    (library (logical PowerSwap-Symbols)
-      (uri /home/steve/pcbs/PowerSwap/kicad/lib/PowerSwap-Symbols.lib))
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
     (library (logical conn)
-      (uri /usr/share/kicad/library/conn.lib)))
+      (uri /usr/share/kicad/library/conn.lib))
+    (library (logical PowerSwap-Symbols)
+      (uri /home/vagrant/pcbs/PowerSwap/kicad/lib/PowerSwap-Symbols.lib)))
   (nets
     (net (code 1) (name GNDPWR)
       (node (ref U1) (pin 9))
