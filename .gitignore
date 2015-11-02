@@ -8,3 +8,4 @@
 *.zip
 **/*-cache.lib
 _autosave-*
+*.~lock.*
