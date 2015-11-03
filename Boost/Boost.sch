@@ -355,7 +355,7 @@ Wire Wire Line
 	7500 4200 7500 3700
 Connection ~ 6850 4200
 Wire Wire Line
-	8900 4200 8900 3300
+	8900 3250 8900 4200
 Connection ~ 7500 4200
 Wire Wire Line
 	8600 3250 8600 4200
@@ -409,17 +409,6 @@ F 3 "" H 2850 2550 60  0000 C CNN
 	1    2850 2550
 	1    0    0    -1  
 $EndComp
-$Comp
-L TST P3
-U 1 1 5633032E
-P 9100 2650
-F 0 "P3" H 9100 2950 50  0000 C BNN
-F 1 "TST" H 9100 2900 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 9100 2650 60  0001 C CNN
-F 3 "" H 9100 2650 60  0000 C CNN
-	1    9100 2650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2850 2550 2850 2650
 Connection ~ 2850 2650
@@ -463,4 +452,18 @@ Text Label 6300 3450 0    60   ~ 0
 SS
 Text Notes 5150 1700 0    60   ~ 12
 Check the 10uF for 16V and 25V
+$Comp
+L TST P3
+U 1 1 5633032E
+P 9100 2550
+F 0 "P3" H 9100 2850 50  0000 C BNN
+F 1 "TST" H 9100 2800 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 9100 2550 60  0001 C CNN
+F 3 "" H 9100 2550 60  0000 C CNN
+	1    9100 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 2550 9100 2650
+Connection ~ 9100 2650
 $EndSCHEMATC
