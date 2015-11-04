@@ -3,7 +3,7 @@
   (general
     (links 118)
     (no_connects 0)
-    (area 140.092409 81.807266 182.940446 134.092733)
+    (area 141.407244 82.9691 181.211947 133.76656)
     (thickness 1.6)
     (drawings 3)
     (tracks 40)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.3048)
+    (last_trace_width 0.1524)
     (user_trace_width 0.3048)
     (user_trace_width 0.6096)
     (trace_clearance 0.1524)
@@ -1588,7 +1588,7 @@
   (gr_text "G IN +\n" (at 159.639 89.4715) (layer F.SilkS)
     (effects (font (size 0.762 0.762) (thickness 0.127)))
   )
-  (gr_text "Power-Swap\nBoost Rev 2L.1-" (at 175.9585 130.4925 90) (layer F.SilkS)
+  (gr_text "Power-Swap\nBoost Rev PS-2-2L.1" (at 175.9585 130.4925 90) (layer F.SilkS)
     (effects (font (size 0.762 0.762) (thickness 0.127)) (justify left))
   )
 
