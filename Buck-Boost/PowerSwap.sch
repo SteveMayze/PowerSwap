@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:PowerSwap-Symbols
+LIBS:PowerSwap-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -470,8 +471,8 @@ F 3 "" H 4900 2100 60  0000 C CNN
 	1    4900 2100
 	1    0    0    -1  
 $EndComp
-Text Notes 2450 2950 0    60   ~ 0
-3V8
+Text Notes 2200 2950 0    60   ~ 0
+4V2 - 3V2
 Text Notes 8550 2900 0    60   ~ 0
 3V3
 $EndSCHEMATC
